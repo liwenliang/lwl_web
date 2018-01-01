@@ -1,0 +1,14 @@
+{
+  "name": "lwl-web",
+  "version": "1.0.0",
+  "description": "学习 web 技术，html, css，javascript ... ",
+  "main": "index.js",
+  "scripts": {
+    "watch": "browser-sync start --server --no-notify --files='*.html, scripts/*.js, styles/*.css'"
+  },
+  "author": "liwenliang <792831375@qq.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.23.1"
+  }
+}
