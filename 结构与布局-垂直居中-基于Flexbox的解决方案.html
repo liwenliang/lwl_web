@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>垂直居中-基于Flexbox的解决方案</title>
+  <style type="text/css">
+    body {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    main {
+      background: #58a;
+      width: 28em;
+      line-height: 1.5;
+      text-align: justify;
+      padding: 1em 1.5em;
+
+      margin: auto;
+    }
+
+    body, h1, h2, p {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h2>Am I centered yet?</h2>
+  <p>
+    这是毋庸置疑的最佳解决方案，因为 Flexbox(伸缩盒)(http://w3.org/ TR/css-flexbox)是专门针对这类需求所设计的。我们之所以要讨论其他方 案，仅仅是因为那些方案在浏览器的支持程度上稍微好一些而已。其实目前 现代浏览器对 Flexbox 的支持度已经相当不错了。
+  </p>
+  <p>
+    我们只需写两行声明即可:先给这个待居中元素的父元素设置 display: flex(在这个例子中是 body 元素)，再给这个元素自身设置我们再熟悉不 过的 margin: auto(在这个例子中是 main 元素):
+  </p>
+  <p>请注意，当我们使用 Flexbox 时，margin: auto 不仅在水平方向上将元 素居中，垂直方向上也是如此。还有一点，我们甚至不需要指定任何宽度(当 然，如果需要的话，也是可以指定的):这个居中元素分配到的宽度等于 max- content。(还记得“自适应内部元素”中提到的那些内部尺寸关键字吗?)</p>
+</main>
+</body>
+</html>

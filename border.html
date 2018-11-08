@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>半透明边框</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style type="text/css">
+    body {
+      background: lightgray;
+      background-image: url('http://csssecrets.io/images/stone-art.jpg');
+    }
+
+    .bg {
+      border: 1em solid rgba(255, 255, 255, 0.5);
+      background: white;
+      line-height: 2em;
+      height: 5em;
+      width: 25em;
+      background-clip: padding-box;
+      overflow: auto;
+      padding: 1em;
+      text-align: justify;
+      text-indent: 2em;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="bg">
+    回首往事，当背景与边框(第三版)(http://w3.org/TR/css3-background) 还在草案阶段时，CSS 工作组内部有过很多讨论，关于是否应该允许多重边
+    框，就像多重背景那样。不幸的是，当时一致认为这个特性并没有足够多的 使用场景，而且网页开发者还可以使用 border-image 来达到相同的效果。 然而工作组忽略了一点:我们通常希望在 CSS 代码层面以更灵活的方式来
+    调整边框样式。因此，网页开发者们最终不得不折腾出各种丑陋的 hack，比 如使用多个元素来模拟多重边框。不过，我们还有更好的办法来解决这个难 题，并不需要添加无用的额外元素来污染我们的结构。
+  </div>
+</div>
+</body>
+</html>

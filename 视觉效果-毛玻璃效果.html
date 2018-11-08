@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>毛玻璃效果</title>
+  <style type="text/css">
+    body {
+      height: 500px;
+    }
+
+    body, .bg:before {
+      background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
+    }
+
+    .bg {
+      width: 400px;
+      margin: auto;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: justify;
+      line-height: 1.8;
+      padding: 0.5em 1em;
+      position: relative;
+      overflow: hidden;
+      margin-top: 300px;
+    }
+
+    .bg:before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      filter: blur(20px);
+      margin: -30px;
+    }
+  </style>
+</head>
+<body>
+<div class="bg">
+  假设大背景的 background-attachment 值是 fixed ，这种情况是有可能的，只不过不太常见。由于我们不能直接对元素本身进行模糊处理，就对一个伪元素进行处理，然后将其定位到元素的下层，它的背景将会无缝匹配的背景。
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>垂直居中-基于视口单位的解决方案</title>
+  <style type="text/css">
+    body {
+      background: yellow;
+    }
+
+    main {
+      background: #58a;
+      width: 28em;
+      max-height: 28em;
+      overflow: auto;
+      line-height: 1.5;
+      text-align: justify;
+      padding: 1em 1.5em;
+      margin: 50vh auto 0;
+      transform: translateY(-50%);
+    }
+
+    body, h1, h2, p {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h2>Am I centered yet?</h2>
+  <p>
+    假设我们不想使用绝对定位，同时只是想把元素相对于视口进行居中，仍然是有希望的。CSS值与单位(第三版)(http://w3.org/TR/css-values-3/#viewport-relative-lengths)定义了一套新的单位，称为视口相关的长度单位。
+    <br>
+     <br>1. vw 是与视口宽度相关的。与常人的直觉不符的是，1vw 实际上表示 视口宽度的 1%，而不是 100%。
+     <br>2. 与 vw 类似，1vh 表示视口高度的 1%。
+     <br>3. 当视口宽度小于高度时，1vmin 等于 1vw，否则等于 1vh。  当视口宽度大于高度时，1vmax 等于 1vw，否则等于 1vh。
+    <br>在我们的这个例子中，适用于外边距的是 vh 单位:
+  </p>
+  <br>
+  <p>
+    可以看到，其效果堪称完美。当然，这个技巧的实用性是 相当有限的，因为它只适用于在视口中居中的场景。
+  </p>
+  <br>
+</main>
+</body>
+</html>

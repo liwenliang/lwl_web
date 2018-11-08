@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>弹框</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style type="text/css">
+    .box {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 4, 9, 0.42);
+    }
+
+    .box .dialog {
+      position: absolute;
+      left: 0;right: 0;top: 0;bottom: 0;
+      width: 816px;
+      height: 522px;
+      border-radius: 3px;
+      box-shadow: 0 30px 48px 0 rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
+      margin: auto;
+    }
+
+    .dialog .container {
+      width: 752px;
+      margin: auto;
+    }
+
+    .dialog .header {
+      height: 68px;
+    }
+
+    .dialog .header h2 {
+      line-height: 68px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #2c2e31;
+    }
+
+    .dialog .content {
+      height: 370px;
+    }
+
+    .dialog .content:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .dialog .content .left {
+      float: left;
+      width: 50%;
+      height: 100%;
+    }
+
+    .tip {
+      height: 20px;
+      font-size: 13px;
+      line-height: 1.54;
+      color: #949699;
+      margin: 8px 0;
+    }
+
+    .dialog .content .right {
+      float: right;
+      width: 50%;
+      height: 100%;
+    }
+
+    .rContent {
+      width: 312px;
+      margin: auto;
+    }
+
+    .rContent img {
+      height: 176px;
+      width: 100%;
+    }
+
+    .dialog .footer {
+      height: 36px;
+      text-align: right;
+      padding: 24px 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      height: 20px;
+      line-height: 20px;
+      font-size: 13px;
+      padding: 8px;
+    }
+
+    .success {
+      background: #ffeb00;
+      color: #505254;
+      border-radius: 2px;
+      box-shadow: 0 4px 5px 0 rgba(255, 235, 0, 0.16), 0 8px 16px 0 rgba(255, 235, 0, 0.32);
+      background-color: #ffeb00;
+    }
+
+    .plan {
+      color: #949699;
+    }
+
+    .inputBox {
+      width: 376px;
+    }
+
+    .searchInput {
+      width: 350px;
+      border: 1px solid #ececed;
+      font-size: 13px;
+      color: #505254;
+      outline: none;
+      padding: 12px;
+    }
+
+    .timeline {
+      width: 312px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #ececed;
+      margin-top: 42px;
+      position: relative;
+    }
+
+    .timeline .start {
+      left: 0;
+    }
+
+    .timeline .end {
+      right: 0;
+    }
+
+    .timeline .dot {
+      position: absolute;
+      top: -6px;
+      left: 10%;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid #ffeb00;
+      background: #ffffff;
+    }
+
+    .timeline .start, .timeline .end {
+      position: absolute;
+      top: -18px;
+      font-size: 12px;
+      height: 16px;
+      color: #b9babc;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="dialog">
+    <div class="container">
+      <div class="header">
+        <h2>添加片尾引导</h2>
+      </div>
+
+      <div class="content">
+        <div class="left">
+          <div class="tip">选择引导视频</div>
+          <div class="inputBox">
+            <input class="searchInput" type="text">
+          </div>
+        </div>
+        <div class="right">
+          <div class="rContent">
+            <div class="tip">设置出现时间</div>
+            <img src="http://houjiyi.oss-cn-beijing.aliyuncs.com/images/blog/adImage/4.jpeg" alt="">
+            <div class="timeline">
+              <span class="start">00:02:24</span>
+              <span class="end">00:02:24</span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span class="btn plan">取消</span>
+        <span class="btn success">确认添加</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

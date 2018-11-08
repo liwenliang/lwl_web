@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>边框图片border-image</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style type="text/css">
+    body {
+      background: gray;
+    }
+
+    .box {
+      margin: 5em auto;
+    }
+
+    .bg {
+      width: 400px;
+      height: 400px;
+      margin: auto;
+      color: #f00;
+      font-size: 1.5em;
+      overflow: auto;
+      background: white;
+      border-top: .2em solid transparent;
+      border-image: 100% 0 0 linear-gradient(90deg, currentColor 4em, transparent 0);
+      padding: 1em 0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="bg">
+    <p>
+      尤其是在搭配渐变图案时更是威力倍增。
+      举个例子，假设我们需要一个顶部边框被
+      裁切的效果，就像一般的脚注那样。我们
+      所需要的就是border-image属性再加
+      上一条由渐变生成的垂直条纹，并把要裁
+      切的长度在渐变中写好。边框线的粗细交给
+      border-width 来控制。代码看起来是这
+      样的:
+    </p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>文本行的斑马条纹</title>
+  <style type="text/css">
+    .box {
+      margin: auto;
+      width: 30em;
+      padding: 0.5em 1.5em;
+      text-align: justify;
+      font-size: 18px;
+      color: white;
+      line-height: 1.5;
+      background-image: linear-gradient(#58a 50%, #72b1db 0);
+      background-size: 100% 3em;
+      background-origin: content-box;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  抛开以前那种给每一行套元素再加背景的做法，我们换一种思路来重 新考虑这个问题。为什么不对整个元素设置统一的背景图像，一次性加上所 有的斑马条纹呢?乍听起来这好像是个糟糕的点子，但别忘了，我们可以在 CSS
+  中用渐变直接生成背景图像，而且可以用 em 单位来设定背景尺寸，这 样背景就可以自动适应 font-size 的变化了。
+  让我们用这个方法给图 5-9 中的这段代码加上斑马条纹。首先，我们需要运用“条纹背景”一节中所描述的方法，创建出水平条纹背景。它的 background-size 需要设置为 line-height 的两倍，因为每个背景贴片需
+  要覆盖两行代码。我们最初尝试写出的代码可能是这样的:
+  <br>
+  让我们回顾一下“灵活的背景定位”中提到的 background-origin。这 个属性正是我们所需要的:它可以告诉浏览器在解析 background-position 时以 content box 的外沿作为基准，而不是默认的
+  padding box 外沿。
+</div>
+</body>
+</html>

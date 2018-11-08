@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>半椭圆</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style type="text/css">
+    .box {
+      margin: 5em auto;
+      border: 1px dashed gray;
+      text-align: center;
+    }
+
+    .bg {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      background: yellow;
+    }
+
+    .top {
+      border-radius: 50% / 100% 100% 0 0;
+    }
+
+    .left {
+      border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    }
+
+    .right {
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    }
+
+    .bottom {
+      border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="bg top"></div>
+  <div class="bg right"></div>
+  <div class="bg bottom"></div>
+  <div class="bg left"></div>
+</div>
+</body>
+</html>

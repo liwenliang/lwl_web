@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>边框来模拟梯形两侧的斜边</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style type="text/css">
+    .box {
+      margin: 5em auto;
+      text-align: center;
+    }
+
+    .bg {
+      display: inline-block;
+      height: 60px;
+      background: #36506d;
+      position: relative;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 60px;
+      padding: 0 1em;
+      color: #fff;
+    }
+
+    .bg:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      border-right: 20px solid #36506d;
+      border-top: 60px solid transparent;
+      left: -20px;
+      top: 0;
+    }
+
+    .bg:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      border-left: 20px solid #36506d;
+      border-top: 60px solid transparent;
+      right: -20px;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="bg">边框来模拟梯形两侧的斜边</div>
+</div>
+</body>
+</html>

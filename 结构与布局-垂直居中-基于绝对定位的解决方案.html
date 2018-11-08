@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>垂直居中-基于绝对定位的解决方案</title>
+  <style type="text/css">
+    body {
+      background: yellow;
+    }
+
+    main {
+      background: #58a;
+      width: 28em;
+      max-height: 28em;
+      overflow: auto;
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1.5;
+      text-align: justify;
+      padding: 0.8em;
+    }
+
+    body, h1, h2, p {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h2>Am I centered yet?</h2>
+  <p>
+    CSS 领域有一个很常见的现象，真正的解决方案往往来自于我们最意想不到的地方。
+    在这个例子中，答案来自于 CSS 变形属性。当我们在 translate() 变形函数中
+    使用百分比值时，是以这个元素自身的宽度和高度为基准进行换算和移动的，而这正
+    是我们所需要的。接下来，只要换用基于百分比的 CSS 变形来对元素进行偏移，
+    就不需要在偏移量中把元素的尺寸写死了。这样我们就可以彻底解除对固定尺寸的
+    依赖:
+  </p>
+  <br>
+  <p>
+    当然，没有任何技巧是十全十美的，上面这个方法也有一些需要注意的地方。
+     <br>1. 我们有时不能选用绝对定位，因为它对整个布局的影响太过强烈。
+     <br>2. 如果需要居中的元素已经在高度上超过了视口，那它的顶部会被视口裁切掉(参见图 7-19)。有一些办法可以绕过这个问题，但 hack 味道过浓。
+     <br>3. 在某些浏览器中，这个方法可能会导致元素的显示有一些模糊，因 为元素可能被放置在半个像素上。这个问题可以用 transform-style: preserve-3d 来修复，不过这个修复手段也可以认为是一个
+    hack，而且很难保证它在未来不会出问题。
+  </p>
+</main>
+</body>
+</html>

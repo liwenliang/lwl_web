@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style type="text/css">
+
+    /* No margin collapsing horizontally ---- */
+
+    .Header-item {
+      margin: 1rem;
+    }
+
+    /* ------------------------------------ */
+
+    .Header {
+      display: flex;
+      background: hsl(219, 79%, 88%);
+    }
+
+    .Header-item {
+      flex: 1;
+      text-align: center;
+      line-height: 3;
+      color: white;
+      background: hsl(219, 79%, 66%);
+    }
+
+    body {
+      font-size: 18px;
+      font-family: Avenir, sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <header class="Header">
+    <div class="Header-item">Item</div>
+    <div class="Header-item">Item</div>
+  </header>
+</div>
+</body>
+</html>

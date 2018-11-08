@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>双侧投影</title>
+  <style type="text/css">
+    .box {
+      text-align: center;
+      margin: 30px;
+    }
+
+    .bg {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 165, 0, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 5px 0px 5px -5px black,
+      -5px 0 5px -5px black;
+      transition: 0.3s;
+    }
+
+    .bg:hover {
+      cursor: pointer;
+      box-shadow: 50px 0px 50px -50px black,
+      -50px 0 50px -50px black;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="bg"></div>
+</div>
+</body>
+</html>

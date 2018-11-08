@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>蚂蚁行军效果</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style type="text/css">
+    body {
+      background: gray;
+    }
+
+    .box {
+      margin: 5em auto;
+    }
+
+    @keyframes ants {
+      to { background-position: 100% }
+    }
+
+    .marching-ants {
+      width: 420px;
+      height: 260px;
+      margin: auto;
+      padding: 1em;
+      border: 1px solid transparent;
+      background:
+              linear-gradient(white, white) padding-box,
+              repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%);
+      background-size: 1em 1em;
+      animation: ants 6s linear infinite;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="marching-ants">
+    <h1>蚂蚁行军效果</h1>
+  </div>
+</div>
+</body>
+</html>

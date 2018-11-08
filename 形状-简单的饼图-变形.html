@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>饼图</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style type="text/css">
+    .box {
+      margin: 5em auto;
+      text-align: center;
+    }
+
+    .pie {
+      position: relative;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      border-radius: 50%;
+      background: yellowgreen;
+      background-image: linear-gradient(90deg, transparent 50%, #655 0);
+    }
+
+    @keyframes spin {
+      to {transform: rotate(.5turn)}
+    }
+
+    @keyframes bg {
+      50% {background: #655;}
+    }
+
+    .pie::before {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      left: 50%; top: 0;
+      /*border: 1px dashed black;*/
+      background-color: inherit;
+      border-radius: 0 100% 100% 0 / 50%;
+      transform-origin: left;
+      animation: spin 50s linear infinite,
+      bg 100s step-end infinite;
+      animation-play-state: paused;
+      animation-delay: inherit;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="pie" style="animation-delay: -10s"></div>
+  <div class="pie" style="animation-delay: -20s"></div>
+  <div class="pie" style="animation-delay: -30s"></div>
+  <div class="pie" style="animation-delay: -40s"></div>
+  <div class="pie" style="animation-delay: -50s"></div>
+  <div class="pie" style="animation-delay: -60s"></div>
+  <div class="pie" style="animation-delay: -70s"></div>
+  <div class="pie" style="animation-delay: -80s"></div>
+  <div class="pie" style="animation-delay: -90s"></div>
+  <div class="pie" style="animation-delay: -100s"></div>
+</div>
+</body>
+</html>

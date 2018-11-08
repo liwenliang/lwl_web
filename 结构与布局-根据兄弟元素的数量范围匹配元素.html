@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>根据兄弟元素的数量范围匹配元素</title>
+  <style type="text/css">
+    .box {
+      padding: 0.5em 1.5em;
+      line-height: 1.5;
+      outline: 2px dashed black;
+      width: 23em;
+      margin: auto;
+    }
+
+    .box li {
+      width: 3em;
+      line-height: 3em;
+      display: inline-block;
+      text-align: center;
+      background: #36506d;
+      color: #fff;
+      font-size: 1.5em;
+      border-radius: 0.2em;
+      margin: 0.3em;
+    }
+
+    /*恰好4个应用样式*/
+    .exect li:first-child:nth-last-child(4),
+    .exect li:first-child:nth-last-child(4) ~ li {
+      background: #aa2c27;
+    }
+
+    /*少于等于4个应用样式*/
+    .less li:first-child:nth-last-child(-n+4),
+    .less li:first-child:nth-last-child(-n+4) ~ li {
+      background: #aa2c27;
+    }
+
+    /*大于等于4个应用样式*/
+    .more li:first-child:nth-last-child(n+4),
+    .more li:first-child:nth-last-child(n+4) ~ li {
+      background: #aa2c27;
+    }
+
+    /*2个到6个之间（包含2和6）应用样式*/
+    .between li:first-child:nth-last-child(n+2):nth-last-child(-n+6),
+    .between li:first-child:nth-last-child(n+2):nth-last-child(-n+6) ~ li {
+      background: #aa2c27;
+    }
+  </style>
+</head>
+<body>
+<div class="box exect">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+</div>
+
+<div class="box less">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</div>
+
+<div class="box more">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+</div>
+
+<div class="box between">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+</div>
+
+</body>
+</html>

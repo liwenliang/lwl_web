@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>百度首页</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <style type="text/css">
+    .header{height: 32px; line-height: 32px; font-size: 12px;color: #535353; border-bottom: 1px solid #e8e8e8;}
+    .header .left { float:left; padding-left: 16px;}
+    .header .left img{vertical-align: middle;}
+    .header .left a, .header .right a{color: #535353;padding: 0 5px;}
+    .header .right a{padding: 0 10px;}
+    .header .right{float: right; font-weight: bold;}
+    .header .right .more{text-align:center;background: #3180fa;color: #fff;width: 86px;display: inline-block;}
+
+    .content{height: 232px;padding-top: 96px;}
+    .content .logo{text-align: center;height: 110px;}
+    .content .searchBox{height: 40px;width: 642px;margin: auto;position: relative;}
+    .content .searchBox .searchInput{height: 20px;width: 460px;padding: 8px 60px 8px 8px;border: 1px solid #afafaf;border-right: none;font-size: 16px;outline: none;}
+    .content .searchBox .searchInput:focus{border: 1px solid #2c7dff;border-right: none;}
+
+    .content .searchBox .tools{display: inline-block; padding: 8px 0;position: absolute;right: 120px;}
+
+    .content .searchBox .searchBtn{width: 104px;height: 38px; line-height:38px;background: #2c7dff;text-align: center;color: #fff;display: inline-block;margin-left: -5px;text-decoration: none}
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="header">
+    <div class="left">
+      <span> 北京: </span>
+      <img src="./assets/wather.png" alt="天气">
+      <span>15℃</span>
+      <img src="./assets/air.png" alt="空气质量">
+      <span>67</span>
+      |
+      <span><a href="">换肤</a></span>
+      <span><a href="">消息</a></span>
+    </div>
+    <div class="right">
+      <span><a href="">新闻</a></span>
+      <span><a href="">hao123</a></span>
+      <span><a href="">地图</a></span>
+      <span><a href="">视频</a></span>
+      <span><a href="">贴吧</a></span>
+      <span><a href="">学术</a></span>
+      <span><a href="">土豆大海</a></span>
+      <span><a href="">设置</a></span>
+      <div class="more">更多产品</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="logo">
+      <img src="./assets/logo.png" alt="logo">
+    </div>
+    <div class="searchBox">
+      <input type="searchInput" autofocus class="searchInput">
+      <div class="tools">
+        <a href=""><img src="./assets/voice.png" alt="voice"></a>
+        <a href=""><img src="./assets/pic.png" alt="voice"></a>
+      </div>
+      <a href="javascript:;" class="searchBtn">百度一下</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

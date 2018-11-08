@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>自适应内部元素</title>
+  <style type="text/css">
+    .box {
+      margin: auto;
+      width: 30em;
+      padding: 0.5em 1.5em;
+      text-align: justify;
+      line-height: 1.5;
+      background: #58a;
+      color: #fff;
+    }
+
+    /*为了给那些旧版浏览器提供一个平稳的回 退样式，我们需要在使用这个技巧的同时，提供一个固定的 max-width 值， 比如:*/
+    figure {
+      max-width: 300px; /*目的是为了优雅降级*/
+      max-width: min-content;/* 关键点 */
+      margin: auto;
+      padding: 1em;
+      box-shadow: 0.2em 0.3em 0.5em rgba(0, 0, 0, 0.4);
+    }
+
+    figure > img {
+      width: 280px;
+    }
+
+  </style>
+</head>
+<body>
+<div class="box">
+  <p>Some text [...]</p> HTML
+  <figure>
+    <img src="./assets/house.svg"/>
+    <figcaption>
+      CSS 内部与外部尺寸模型(第三版)(http://w3.org/TR/css3-sizing)是 一个相对较新的规范，它为 width 和 height 属性定义了一些新的关键字， 其中最有用的应该就是 min-content
+      了。这个关键字将解析为这个容器内 部最大的不可断行元素的宽度(即最宽的单词、图片或具有固定宽度的盒元 素)11。这正是我们梦寐以求的!现在，使用以下两行简单的 CSS 代码就可以 把 figure
+      设置为恰当的宽度，并让它水平居中:
+    </figcaption>
+  </figure>
+  <p>More text [...].</p>
+</div>
+</body>
+</html>
