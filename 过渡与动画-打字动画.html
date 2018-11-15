@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打字动画</title>
+    <style type="text/css">
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+
+        @keyframes caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        h1 {
+            width: 14em;
+            display: inline-block;
+            white-space: nowrap;
+            animation: typing 10s steps(14),
+            caret 1s steps(1) infinite;
+            border-right: 0.15em solid;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<h1>中华人民共和国中华人民共和国</h1>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>缓动效果</title>
+  <style type="text/css">
+    @keyframes bounce {
+      60%, 80%, to {
+        transform: translateY(400px);
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+      }
+      70% {
+        transform: translateY(300px);
+      }
+      90% {
+        transform: translateY(360px);
+      }
+    }
+
+    .ball {
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(yellow, red);
+      border-radius: 50%;
+      animation: bounce 3s cubic-bezier(0.1, 0.25, 1, 0.25) forwards;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(skyblue, white 500px, yellowgreen 0);
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+<div class="ball"></div>
+</body>
+</html>
