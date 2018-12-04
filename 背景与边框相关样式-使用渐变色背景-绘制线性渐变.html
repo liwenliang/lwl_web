@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景与边框相关样式-使用渐变色背景-绘制线性渐变</title>
+    <style type="text/css">
+        .desc {
+            line-height: 1.5;
+            font-size: 14px;
+            padding: 1em;
+            margin: 0;
+        }
+
+        .pre {
+            white-space: pre;
+        }
+
+        .bg {
+            height: 300px;
+            background: linear-gradient(180deg, orange 20%, black 70%);
+        }
+
+        .bg1{
+            height: 300px;
+            background: linear-gradient(180deg, orange 20px, black 0);
+            background-size: 100% 40px;
+        }
+    </style>
+</head>
+<body>
+<p class="desc">
+    在CSS 3中，支持对于元素指定渐变色背景。所谓渐变是指从一种颜色慢慢过渡到另外一种颜色。渐变分为线性渐变与放射性渐变。
+</p>
+<p class="desc">
+    首先我们介绍一下线性渐变的指定方法，最简单的使用代码如下所示：
+    <br>
+    <mark>background: linear-gradient(to bottom,orange,black);</mark>
+    <br>
+    在上述代码中，我们通过在样式属性值中使用linear-gradient函数实现线性渐变，函数中使用三个参数，其中第一个参数的可指定参数值如下所示。
+</p>
+<p class="desc">
+    可以将linear-gradient函数的第一个参数值指定为一个角度，其作用为修改渐变线的角度。
+    <br>
+    <mark>background: linear-gradient(30deg,orange,black);</mark>
+</p>
+<p class="desc pre">
+    如果不想将渐变色的起点或终点设置为元素的顶端、底端、左边、右边、左上角、左下角、右上角或右下角，可以在起点色或终点色后边指定离渐变色起点或渐变色终点的偏离位置（不指定时默认值分别为0%及100%）。
+
+    将代码清单23-7中div元素的background样式属性值修改为如下所示：
+
+    background: linear-gradient(to bottom,orange 20%,black 70%);
+    这段代码表示从div元素的顶端往下20%，即离元素顶端300（300为元素高度）*20%=60像素处开始渐变，一直渐变到离元素底端30%（100%-70%），即离元素底端300*30%=90像素处停止渐变。
+
+    在浏览器中访问修改后的示例页面。页面显示效果如图23-18所示。
+</p>
+
+<div class="bg">23-18</div>
+
+<div class="bg1"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字与字体 自动换行 word-break</title>
+    <style type="text/css">
+        p[class='desc'] {
+            line-height: 1.5em;
+            font-size: 14px;
+            text-indent: 2em;
+        }
+
+        p.test {
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+<p class="test">
+    指定自动换行的处理方法：当word-break属性使用break-all参数值时，对于西方文字来说，允许在单词内换行。
+    对于标点符号来说，当word-break属性使用break-all参数值时，在Safari浏览器与Chrome浏览器中，允许标点符号位于行首
+</p>
+
+<hr>
+<p class="desc">
+    指定自动换行的处理方法：当word-break属性使用break-all参数值时，对于西方文字来说，允许在单词内换行。
+</p>
+<p class="desc">
+    对于标点符号来说，当word-break属性使用break-all参数值时，在Safari浏览器与Chrome浏览器中，允许标点符号位于行首
+</p>
+</body>
+</html>

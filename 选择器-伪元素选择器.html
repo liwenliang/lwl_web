@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器 伪元素选择器</title>
+    <style type="text/css">
+        #content {
+            border: 1px dashed red;
+        }
+
+        div[id='firstLine']::first-line {
+            background: red;
+        }
+
+        div[id='firstLetter']::first-letter {
+            background: red;
+        }
+
+        div[id='before']::before {
+            content: 'before';
+            font-size: 2em;
+        }
+
+        div[id='after']::after {
+            content: 'after';
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+<section id="content">
+    <div id="firstLine">first-line伪元素选择器的使用示例 <br>这里是第二行</div>
+    <div id="firstLetter">first-letter伪元素使用示例</div>
+    <div id="before"></div>
+    <div id="after"></div>
+</section>
+<section>
+    <div>
+        在CSS中，主要有如下四个伪元素选择器。
+        <ol>
+            <li>
+                first-line伪元素选择器
+                <p>first-line伪元素选择器用于向某个元素中的第一行文字使用样式</p>
+            </li>
+            <li>
+                first-letter伪元素选择器
+                <p>first-letter伪元素选择器用于向某个元素中的文字的首字母（欧美文字）或第一个字（中文或日文等汉字）使用样式。</p>
+            </li>
+            <li>
+                before伪元素选择器
+                <p>before伪元素选择器用于在某个元素之前插入一些内容。</p>
+            </li>
+            <li>
+                after伪元素选择器
+                <p>after伪元素选择器用于在某个元素之后插入一些内容。</p>
+            </li>
+        </ol>
+    </div>
+</section>
+</body>
+</html>

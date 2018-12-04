@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画-Animation功能</title>
+    <style type="text/css">
+        .desc {
+            font-size: 14px;
+            line-height: 2.5em;
+            text-indent: 2em;
+            text-align: justify;
+            padding: 1em;
+        }
+
+        @keyframes mycolor {
+            0% {
+                background-color: red;
+                transform: rotate(0deg);
+            }
+            30% {
+                background-color: darkblue;
+                transform: rotate(90deg);
+            }
+            60% {
+                background-color: yellow;
+                transform: rotate(180deg);
+            }
+            100% {
+                background-color: red;
+                transform: rotate(270deg);
+            }
+        }
+
+        @keyframes up {
+            from {
+                transform: translate(0px, 50px);
+                background-color: rgba(255, 0, 0, 0);
+            }
+            to {
+                transform: translate(0px, 0px);
+                background-color: rgba(255, 0, 0, 1);
+            }
+        }
+
+        .animation {
+            width: 300px;
+            height: 300px;
+            background: red;
+            margin: 0 auto;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+
+            transform: translate(0px, 0px);
+            animation: up 1s ease-out 1;
+        }
+
+        .animation:hover {
+            animation-name: mycolor;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+<div class="desc">
+    Animations功能与Transitions功能相同，都是通过改变元素的属性值来实现动画效果。它们的区别在于：使用Transitions功能时只能通过指定属性的开始值与结束值，然后在这两个属性值之间进行平滑过渡的方式来实现动画效果，因此不能实现比较复杂的动画效果；而Animations通过定义多个关键帧以及定义每个关键帧中元素的属性值来实现更为复杂的动画效果。
+</div>
+<div class="animation"></div>
+</body>
+</html>

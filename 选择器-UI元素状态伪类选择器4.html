@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器 UI元素状态伪类选择器4</title>
+    <style type="text/css">
+        .checked input[type='checkbox']:checked {
+            outline: 2px solid blue;
+        }
+
+        .default input[type='checkbox']:default {
+            outline: 2px solid lightslategrey;
+        }
+
+        .indeterminate input[type='radio']:indeterminate {
+            outline: 3px solid darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+<form class="checked">checked:
+    <input type="checkbox">阅读</input>
+    <input type="checkbox" checked>旅游</input>
+    <input type="checkbox">看电影</input>
+    <input type="checkbox">上网</input>
+</form>
+
+<form class="default">default:
+    <input type="checkbox" checked>阅读</input>
+    <input type="checkbox">旅游</input>
+    <input type="checkbox">看电影</input>
+    <input type="checkbox">上网</input>
+</form>
+
+<form class="indeterminate">indeterminate:
+    <input type="radio">阅读</input>
+    <input type="radio">旅游</input>
+    <input type="radio">看电影</input>
+    <input type="radio">上网</input>
+</form>
+
+<hr>
+<p class="desc">
+    E：checked伪类选择器用来指定当表单中的radio单选框或checkbox复选框处于选取状态时的样式。
+</p>
+<p class="desc">
+    E：default选择器用来指定当页面打开时默认处于选取状态的单选框或复选框控件的样式。需要注意的是，即使用户将该单选框或复选框控件的选取状态设定为非选取状态，E：default选择器中指定的样式仍然有效。
+</p>
+<p class="desc">
+    E：indeterminate伪类选择器用来指定当页面打开时，一组单选框中没有任何一个单选框被设定为选取状态时整组单选框的样式，如果用户选取了其中任何一个单选框，则该样式被取消指定。
+</p>
+</body>
+</html>

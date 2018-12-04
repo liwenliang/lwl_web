@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景与边框相关样式-一个元素中显示多个背景图像</title>
+    <style type="text/css">
+        .desc {
+            line-height: 1.5;
+            font-size: 14px;
+            padding: 1em;
+            margin: 0;
+        }
+
+        .bg {
+            height: 600px;
+            border: 1px solid gray;
+            background-image: url("assets/touxiang_244.jpeg"),
+            url("assets/morocco.png");
+            background-repeat: no-repeat, repeat;
+        }
+
+        .pre {
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+<p class="desc">
+    在CSS 3中可以在一个元素中显示多个背景图像，还可以将多个背景图像进行重叠显示，从而使得调整背景图像中所用的素材变得更加容易。
+</p>
+<p class="desc">
+    在使用background-image属性来指定图像文件的时候，指定的时候是按在浏览器中显示时图像叠放的顺序从上往下指定的，第一个图像文件是放在最上面的，最后指定的文件是放在最下面的。另外，通过多个background-repeat属性与background-position属性的指定，可以单独指定背景图像中某个图像文件的平铺方式与放置位置。
+</p>
+<p class="desc">
+    在代码清单23-6中，通过指定多个background-image属性、background-repeat属性与background-position属性，我们实现了在一个元素的背景中显示多个图像文件的功能。具体来说，允许被多重指定并配合多个图像文件一起利用的属性如下：
+</p>
+<p class="desc pre">
+    ·background-image
+
+    ·background-repeat
+
+    ·background-position
+
+    ·background-clip
+
+    ·background-origin
+
+    ·background-size
+</p>
+<div class="bg"></div>
+</body>
+</html>

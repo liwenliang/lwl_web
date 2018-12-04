@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器 UI元素状态伪类选择器1</title>
+    <style type="text/css">
+        input[type='text']:hover {
+            background: greenyellow;
+        }
+
+        input[type='text']:focus {
+            background: skyblue;
+        }
+
+        input[type='text']:active {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <p>姓名：<input type="text" name="name" /></p>
+    <p>地址：<input type="text" name="address" /></p>
+</form>
+
+<hr>
+
+<p class="desc">
+    E：hover伪类选择器被用来指定当鼠标指针移动到元素上时元素所使用的样式
+</p>
+<p class="desc">
+    E：active伪类选择器被用来指定元素被激活（鼠标在元素上按下还没有松开）时使用的样式。
+</p>
+<p class="desc">
+    E：focus伪类选择器被用来指定元素获得光标焦点时使用的样式，主要在文本框控件获得焦点并进行文字输入时使用。
+</p>
+</body>
+</html>

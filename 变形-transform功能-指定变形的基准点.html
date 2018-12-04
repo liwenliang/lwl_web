@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变形-tansform功能-指定变形的基准点</title>
+    <style type="text/css">
+        .desc {
+            font-size: 14px;
+            line-height: 2.5em;
+            text-indent: 2em;
+        }
+
+        .desc:first-letter {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .div1, .div2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+        .div1 {
+            border: 1px dashed gray;
+            transform: translate(-50%, -50%);
+        }
+
+        .div2 {
+            background: rgba(0, 0, 0, 0.6);
+            transform: translate(-50%, -50%) rotate(45deg);
+            transform-origin: right bottom;
+        }
+    </style>
+</head>
+<body>
+<div class="desc">
+    在使用transform方法进行文字或图像变形的时候，是以元素的中心点为基准点进行变形的。使用transform-origin属性，可以改变变形的基准点。
+</div>
+<div class="desc">
+    指定transform-origin属性值的时候，采用“基准点在元素水平方向上的位置，基准点在元素垂直方向上的位置”，其中“基准点在元素水平方向上的位置”中可以指定的值为left、center、right，“基准点在元素垂直方向上的位置”中可以指定的值为top、center、bottom。
+</div>
+<div class="div1"></div>
+<div class="div2"></div>
+</body>
+</html>

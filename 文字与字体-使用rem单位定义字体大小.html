@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字与字体 使用rem单位定义字体大小</title>
+    <style type="text/css">
+        :root {
+            font-size: 62.5%;
+        }
+
+        p[class='desc'] {
+            line-height: 1.5em;
+            text-indent: 2em;
+            padding: 1em;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        pre {
+            font-family: "Comic Sans MS";
+            font-size: 1.4rem;
+            border: 1px dashed gray;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<p class="desc">
+    在CSS3中，现在可以使用rem单位来定义字体大小。rem字体尺寸单位将根据页面上的根元素（一般指html元素）的字体大小而计算出实际的字体大小。在过去，我们使用em单位来指定字体大小，em单位根据元素的父元素的字体大小而计算出实际的字体大小，因此，当我们将元素从一个父元素移动到另一个父元素中时很可能使元素的实际字体大小产生变化。
+</p>
+<p class="desc">
+    在大多数浏览器中，默认字体大小为16个像素，针对默认字体大小来说，可以将根元素的字体大小指定为62.5%，从而使浏览器自动计算出10个像素。这样，当用户将浏览器的默认字体自动放大时，也可以使所有元素的字体大小自动放大到一个令人满意的效果。
+</p>
+<p class="desc">
+    注意，在诸如IE 8之前版本等老式浏览器中，不能使用rem字体单位。所以需要通过书写如下所示的样式代码来让我们的页面可以正常显示在各种版本的浏览器中。
+</p>
+<pre>
+    html { font-size: 62.5% }
+    small { font-size: 11px;font-size: 1.1rem; }
+    strong {font-size: 18px;font-size: 1.8rem; }
+</pre>
+</body>
+</html>

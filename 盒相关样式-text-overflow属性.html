@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒相关样式-text-overflow属性</title>
+    <style type="text/css">
+        .box div {
+            margin: 2em;
+        }
+
+        .container {
+            border: 1px solid red;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .towDot {
+            border: 1px solid red;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+        }
+
+        p {
+            border: 2px solid gray;
+            position: relative;
+            line-height: 1.5em;
+            /* 3 times the line-height to show 3 lines */
+            height: 4.5em;
+            overflow: hidden;
+            padding: 0 1em;
+            word-break: break-all;
+        }
+
+        p::after {
+            content: "...";
+            font-weight: bold;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 0 20px 1px 45px;
+            background: url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    文字溢出 点点点
+    <div class="container">
+        当通过把overflow属性的属性值设定为“hidden”的方法将盒中容纳不下的内容隐藏起来时，如果使用text-overflow属性，可以在盒的末尾显示一个代表省略的符号“…”。但是，text-overflow属性只在当盒中的内容在水平方向上超出盒的容纳范围时有效。
+    </div>
+    <div class="towDot">
+        当通过把overflow属性的属性值设定为“hidden”的方法将盒中容纳不下的内容隐藏起来时，如果使用text-overflow属性，可以在盒的末尾显示一个代表省略的符号“…”。但是，text-overflow属性只在当盒中的内容在水平方向上超出盒的容纳范围时有效。
+    </div>
+    <p>WebKit Browsers will clamp the number of lines in this paragraph to 2. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</body>
+</html>

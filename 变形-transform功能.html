@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变形-tansform功能</title>
+    <style type="text/css">
+        .desc {
+            font-size: 14px;
+            line-height: 1.5em;
+        }
+
+        .rotate, .scale, .skew {
+            width: 300px;
+            background: red;
+            margin: 150px auto;
+            text-align: center;
+        }
+
+        .rotate {
+            transform: rotate(45deg);
+        }
+
+        .scale {
+            transform: scale(1, 2);
+        }
+
+        .skew {
+            transform: skew(45deg, 0deg);
+        }
+
+        /*
+            通过translate值的百分比是相对自身百分比计算这一属性
+            可以将一个元素置于屏幕正中间
+        */
+        .translate {
+            width: 300px;
+            background: red;
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<div class="desc">
+    在CSS 3中，可以使用transform功能实现4种文字或图像的变形处理，分别是旋转、缩放、倾斜以及移动。
+</div>
+<div class="rotate">旋转</div>
+<div class="scale">缩放</div>
+<div class="skew">倾斜</div>
+<span class="translate">移动</span>
+</body>
+</html>

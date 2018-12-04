@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒相关样式-display</title>
+    <style type="text/css">
+        .box {
+            border: 1px solid red;
+            text-align: center;
+        }
+
+        ul:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        ul {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        ul, li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu {
+            list-style: none;
+        }
+
+        .menu li {
+            float: left;
+            border: 1px solid gray;
+            font-size: 14px;
+            background: #36506d;
+            text-align: center;
+        }
+
+        .menu li:hover {
+            background: darkmagenta;
+        }
+
+        .menu li:hover a {
+            color: #fff;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 1em 1.8em;
+            font-size: 16px;
+            font-weight: bold;
+            color: #e1ff0f;
+        }
+
+        .menu li:not(:nth-last-child(1)) {
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul class="menu">
+        <li><a href="#">菜单1</a></li>
+        <li><a href="#">菜单2</a></li>
+        <li><a href="#">菜单3</a></li>
+        <li><a href="#">菜单4</a></li>
+    </ul>
+</div>
+</body>
+</html>

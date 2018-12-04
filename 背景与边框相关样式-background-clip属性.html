@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景与边框相关样式-background-clip属性</title>
+    <style type="text/css">
+        .desc {
+            line-height: 1.5;
+            font-size: 14px;
+            padding: 1em;
+            margin: 0;
+        }
+
+        div {
+            background-color: black;
+            background-image: url('assets/morocco.png');
+            border: dashed 15px green;
+            padding: 30px;
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        div.div1 {
+            background-clip: border-box;
+        }
+
+        div.div2 {
+            background-clip: padding-box;
+        }
+    </style>
+</head>
+<body>
+<p class="desc">
+    在HTML页面中，一个具有背景的元素通常由元素的内容、内部补白（padding）、边框、外部补白（margin）构成
+</p>
+<p class="desc">
+    在元素中背景的显示范围在CSS 2与CSS 2.1、CSS 3中并不相同。在CSS 2中，背景的显示范围是指内部补白之内的范围，不包括边框；而在CSS 2.1乃至CSS 3中，背景的显示范围是指包括边框在内的范围。在CSS
+    3中，可以使用background-clip来修改背景的显示范围，如果将background-clip的属性值设定为border，则背景范围包括边框区域，如果设定为padding，则不包括边框区域。
+</p>
+<p class="desc">
+    当背景为图像时运行结果也同样如此，当background-clip的属性值为border时，图像会占据边框点划线的点与点中间的空间，而当background-clip的属性值为padding时，边框点划线的点与点中间的颜色仍然为网页背景色。
+</p>
+
+<div class="div1">示例文字1</div>
+<br>
+<div class="div2">示例文字2</div>
+</body>
+</html>

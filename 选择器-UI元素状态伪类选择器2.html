@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器 UI元素状态伪类选择器2</title>
+    <style type="text/css">
+        input[type='text']:enabled {
+            background: red;
+        }
+
+        input[type='text']:disabled {
+            background: #cecece;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <p>姓名：<input type="text" name="name" disabled /></p>
+    <p>地址：<input type="text" name="address" /></p>
+</form>
+
+<hr>
+
+<p class="desc">
+    E：enabled伪类选择器用来指定当元素处于可用状态时的样式。
+</p>
+<p class="desc">
+    E：disabled伪类选择器用来指定当元素处于不可用状态时的样式。
+</p>
+</body>
+</html>

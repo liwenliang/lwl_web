@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字与字体 服务端字体 Web Font与@font-face</title>
+    <style type="text/css">
+        @font-face {
+            font-family: fangzheng;
+            src: url("assets/方正汉真广标简体.TTF") format('truetype');
+            font-weight: normal;
+        }
+
+        p[class='desc'] {
+            line-height: 1.5em;
+            font-size: 24px;
+            text-indent: 2em;
+            padding: 1em;
+            font-family: fangzheng;
+        }
+    </style>
+</head>
+<body>
+<hr>
+<p class="desc">
+    ABCDEFGHIJKLMNOPQRSTUVWXYZ
+</p>
+<p class="desc">
+    在CSS 3中，新增了Web Fonts功能，使用这个功能，网页中可以使用安装在服务器端的字体，只要某个字体在服务器端已经安装，网页中就都能够正常显示了。
+</p>
+<p class="desc">
+    在src属性值中，指定服务器端字体的字体文件所在的路径，在format属性值中声明字体文件的格式，可以省略文件格式的声明而单独使用src属性值。在这段代码中，使用了exljbris字体公司免费提供的Fontin Sans字体，字体文件格式为OpenType格式。到目前为止，可以使用的文件格式为OpenType格式与TrueType文件格式，使用OpenType格式时将format属性值设定为opentype，使用TrueType文件格式时将format属性值设定为truetype，OpenType格式的文件扩展名为“.otf”，TrueType文件格式的扩展名为“.ttf”.
+    在Internet Explorer浏览器中使用服务器端字体的时候，只能使用微软自带的Embedded OpenType字体文件，文件扩展名为“.eot”，同时不需要使用format属性值。
+</p>
+</body>
+</html>

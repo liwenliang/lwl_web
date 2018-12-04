@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景与边框相关样式-background-size属性</title>
+    <style type="text/css">
+        .desc {
+            line-height: 1.5;
+            font-size: 14px;
+            padding: 1em;
+            margin: 0;
+        }
+
+        div.bg {
+            background-color: black;
+            background-image: url('assets/touxiang_244.jpeg');
+            /*background-origin: content-box; !*从内容区域绘制背景*!*/
+            /*background-clip: content-box; !*背景剪裁内容区域*!*/
+            padding: 30px;
+            height: 304px;
+            /*width: 896px;*/
+            color: black;
+            text-shadow: 2px 3px 4px rgba(255, 255, 255, 1);
+            font-size: 2em;
+            font-weight: bold;
+            background-size: 112px 112px;
+            /*background-size: 50% 50%;*/
+            /*background-size: contain;*/
+            /*background-size: cover;*/
+            /*background-repeat: space;*/
+            background-repeat: round;
+        }
+    </style>
+</head>
+<body>
+<p class="desc">
+    在CSS 3中，可以使用background-size属性来指定背景图像的尺寸。
+</p>
+<p class="desc">
+    使用background-size属性来指定背景图像尺寸的最简单方法类似如下所示：
+    <br>
+    <mark>background-size: 40px 20px;</mark>
+    <br>
+    其中，40px为背景图像的宽度，20px为背景图像的高度，中间用半角空格进行分隔。
+</p>
+<div class="bg">
+    "指定背景图像尺寸"的意思并不是对背景图进行相应尺寸的裁剪，而是对整张背景图做相应尺寸的缩放
+</div>
+<p class="desc">
+    另外，如果要维持图像纵横比例，可以在设定图像宽度与高度的同时，将另一个参数设定为auto。例如，将代码清单23-4中的样式代码修改为如下所示的样式代码，在该代码中将图像的高度设定为20像素，宽度设定为auto。
+</p>
+<p class="desc">
+    在使用background-size属性的时候，可以将宽度与高度中的一个参数省略，只指定一个参数。在这种情况下，在浏览器中将该值作为宽度值，auto作为高度值进行处理。
+</p>
+<p class="desc">
+    在指定宽度与高度的时候，也可以使用百分比的值来作为参数。这时，在浏览器中将指定的百分比视为图像尺寸除以整个边框区域的尺寸后得出的百分比来处理。
+</p>
+<p class="desc">
+    也可以将background-size属性值指定为contain关键字，这将把原始图像在维持纵横比的前提下自动放大或缩小，以使原始图像的宽度或高度完全等于元素的宽度或高度（确保图像能被完整显示在元素中）。
+</p>
+<p class="desc">
+    可以将background-size属性值指定为cover关键字，这会使原始图像在维持纵横比的前提下将背景图像自动缩放到填满元素内部，如果元素的长宽比例与原始图像的长宽比例不一致，那么多余部分将被剪去。
+</p>
+<p class="desc">
+    在平铺背景图像时，可以使用4个选项：no-repeat、repeat、repeat-x与repeat-y。虽然这几个选项毫无疑问是有用的，但是如果进行平铺之后图像超出了背景的范围，它们并没有对图像进行更好地控制，只是简单地裁剪掉图像超出背景范围的部分。
+</p>
+<p class="desc">
+    CSS 3中添加了两个新的可用于更好地平铺背景图像的选项：space与round。
+</p>
+<p class="desc">
+    其中space选项在水平方向或垂直方向平铺背景图像时并不裁剪掉图像超出背景的部分，也不会调整背景图像尺寸，而是自动调整图像与图像之间的间距，而round选项在水平方向或垂直方向平铺背景图像时同样不会裁剪掉图像超出背景的部分，而是会自动调整背景图像的尺寸。
+</p>
+</body>
+</html>

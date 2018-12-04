@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒相关样式-box-shadow属性</title>
+    <style type="text/css">
+        .desc {
+            padding: 1em;
+            line-height: 1.5em;
+            font-size: 14px;
+        }
+
+        .bs1 {
+            width: 400px;
+            height: 200px;
+            margin: auto;
+            border: 1px solid gray;
+            box-shadow: 2px 3px 5px /*-2px*/ gray /*inset*/;
+        }
+
+        .bs2 span {
+            background: #ffaa00;
+            box-shadow: 2px 3px 5px /*-2px*/ gray /*inset*/;
+        }
+
+        .bs3:first-letter {
+            background: #ffaa00;
+            box-shadow: 2px 3px 5px /*-2px*/ gray /*inset*/;
+        }
+
+        .bs4:first-line {
+            background: #ffaa00;
+            box-shadow: 2px 3px 5px /*-2px*/ gray /*inset*/;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="desc">
+        在CSS
+        3中，可以使用box-shadow属性让盒在显示时产生阴影效果。到目前为止，该属性受到了Firefox浏览器、Chrome浏览器、Safari浏览器及Opera浏览器的支持。box-shadow属性的指定方式如下所示。
+
+        box-shadow：length length length color
+        其中，前面3个length分别指阴影离开文字的横方向距离、阴影离开文字的纵方向距离和阴影的模糊半径，color指阴影的颜色。
+    </div>
+
+    <div class="bs1"></div>
+
+    <div class="bs2 desc">
+        可以单独对盒内的子元素使用阴影。 <span>代码清单22-15是对盒内的子元素使用阴影的一个示例</span>，该示例中具有一个div元素，div元素内部有一个span子元素，使用box-shadow属性让span子元素具有阴影效果。
+    </div>
+
+    <div class="bs3 desc">
+        可以使用first-letter选择器或first-line选择器来只让第一个文字或第一行具有阴影效果，代码清单22-16展示了一个只让第一个文字具有阴影效果的示例。该示例中具有一个div元素，元素内有一些文字，使用first-letter选择器来只让第一个文字具有阴影效果。
+    </div>
+
+    <div class="bs4 desc">
+        可以使用first-letter选择器或first-line选择器来只让第一个文字或第一行具有阴影效果，代码清单22-16展示了一个只让第一个文字具有阴影效果的示例。该示例中具有一个div元素，元素内有一些文字，使用first-letter选择器来只让第一个文字具有阴影效果。
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器 属性选择器</title>
+    <style type="text/css">
+        div[id*='b'] {
+            background: red;
+        }
+
+        div[id^='d'] {
+            background: blue;
+        }
+
+        div[id$='i'] {
+            background: yellowgreen;
+        }
+
+        div[id='jkl'] {
+            background: brown;
+        }
+
+        p {
+            line-height: 1.5em;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+<div id="abc">abc [id*='b']</div>
+<div id="def">def [id^='d']</div>
+<div id="ghi">ghi [id$='i']</div>
+<div id="jkl">jkl [id='jkl']</div>
+<section>
+    <p>
+        在CSS3中，追加了三个属性选择器分别为：<mark>[att*=val]、[att^=val]和[att$=val]</mark>，使得属性选择器有了通配符的概念。
+    </p>
+    <p>
+        <mark>[att*=val]</mark>属性选择器的含义是：如果元素用att表示的属性的属性值中包含用val指定的字符，则该元素使用这个样式。
+    </p>
+    <p>
+        <mark>[att^=val]</mark>属性选择器的含义是：如果元素用att表示的属性的属性值的开头字符为用val指定的字符话，则该元素使用这个样式。
+    </p>
+    <p>
+        <mark>[att$=val]</mark>属性选择器的含义是：如果元素用att表示的属性的属性值的结尾字符为用val指定的字符，则该元素使用这个样式。
+    </p>
+</section>
+</body>
+</html>

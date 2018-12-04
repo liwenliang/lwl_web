@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画-Transitions功能</title>
+    <style type="text/css">
+        .desc {
+            font-size: 14px;
+            line-height: 2.5em;
+            text-indent: 2em;
+            text-align: justify;
+            padding: 1em;
+        }
+
+        .transition {
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            background: yellow;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            user-select: none;
+            transform: translate(0, 0);
+            transition: all 1000ms linear 1000ms;
+        }
+
+        .transition:hover{
+            background: lightblue;
+            transform: translate(100px, 100px);
+        }
+    </style>
+</head>
+<body>
+<div class="desc">
+    在CSS 3中，Transitions功能通过将元素的某个属性从一个属性值在指定的时间内平滑过渡到另一个属性值来实现动画功能。
+    <br>
+    用法：
+    <mark>transition: property duration timing-function</mark>
+    <br>
+    除上述三个属性外，CSS 3中还具有一个transition-delay属性，该属性指定变换动画特效延迟多久后开始执行。也就是说，当触发特效后，需要经过transition-delay属性值指定的延迟时间后才真正开始执行特效。可以用秒单位或毫秒单位来指定属性值。
+</div>
+<div class="transition">鼠标悬浮-背景渐变</div>
+</body>
+</html>

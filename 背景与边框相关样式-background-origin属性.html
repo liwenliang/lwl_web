@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景与边框相关样式-background-origin属性</title>
+    <style type="text/css">
+        .desc {
+            line-height: 1.5;
+            font-size: 14px;
+            padding: 1em;
+            margin: 0;
+        }
+
+        div {
+            background-color: black;
+            background-image: url('assets/morocco.png');
+            background-repeat: no-repeat;
+            border: dashed 15px green;
+            padding: 30px;
+            color: blue;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        div.div1 {
+            background-origin: border-box;
+            background-clip: padding-box;
+        }
+
+        div.div2 {
+            background-origin: padding-box;
+        }
+
+        div.div3 {
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+<p class="desc">
+    在绘制背景图像时，默认是从内部补白（padding）区域的左上角开始绘制的，但是可以利用background-origin属性来指定绘制时从边框的左上角开始绘制，或者从内容的左上角开始绘制。
+</p>
+<div class="div1">示例文字1</div>
+<br>
+<div class="div2">示例文字2</div>
+<br>
+<div class="div3">示例文字3</div>
+</body>
+</html>

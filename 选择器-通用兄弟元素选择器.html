@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器 通用兄弟元素选择器</title>
+    <style type="text/css">
+        div ~ p {
+            background-color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>p元素为div元素的兄弟元素</p>
+    <div>
+        <p>p元素为div元素的子元素</p>
+        <p>p元素为div元素的子元素</p>
+    </div>
+    <hr/>
+    <p>p元素为div元素的兄弟元素</p>
+    <p>p元素为div元素的兄弟元素</p>
+    <hr/>
+    <p>p元素为div元素的兄弟元素</p>
+    <hr/>
+    <div>p元素为div元素的子元素</div>
+    <hr/>
+    <p>p元素为div元素的兄弟元素</p>
+</div>
+
+
+<hr>
+<p class="desc">
+    关于选择器部分，最后要介绍的一个选择器是通用兄弟元素选择器，它用来指定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用的样式。
+</p>
+<p class="desc">
+    该示例中对所有div元素之后的，与div元素处于同级的p元素指定其背景色为绿色，但是对div元素内部的p元素的背景色不做指定。
+</p>
+<pre>
+    子元素 ~子元素之后的同级兄弟元素 {
+    // 指定样式
+    }
+</pre>
+</body>
+</html>

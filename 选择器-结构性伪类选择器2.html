@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器 结构性伪类选择器2</title>
+    <style type="text/css">
+        .A, .B, .C, .D, .E, .F {
+            border: 1px dashed red;
+        }
+
+        p[class='desc'] {
+            line-height: 1.5em;
+            font-size: 16px;
+            padding: 2em;
+            text-indent: 2em;
+        }
+
+        .A li:first-child {
+            background: cadetblue;
+        }
+
+        .A li:last-child {
+            background: palevioletred;
+        }
+
+        .B li:nth-child(3) {
+            background: bisque;
+        }
+
+        .B li:nth-last-child(2) {
+            background: lightcoral;
+        }
+
+        .C li:nth-child(odd) {
+            background: blueviolet;
+        }
+
+        .C li:nth-child(even) {
+            background: greenyellow;
+        }
+
+        .D h2:nth-of-type(odd){
+            background-color: yellow;
+        }
+        .D h2:nth-of-type(even){
+            background-color: skyblue;
+        }
+
+        .E li:nth-child(4n+1) {
+            background-color: yellow;
+        }
+        .E li:nth-child(4n+2) {
+            background-color: limegreen;
+        }
+        .E li:nth-child(4n+3) {
+            background-color: red;
+        }
+        .E li:nth-child(4n+4) {
+            background-color: lightblue;
+        }
+        
+        .F li:only-child {
+            background: goldenrod;
+        }
+    </style>
+</head>
+<body>
+
+<h2>列表A</h2>
+<ul class="A">
+    <li>列表项目1</li>
+    <li>列表项目2</li>
+    <li>列表项目3</li>
+    <li>列表项目4</li>
+    <li>列表项目5</li>
+</ul>
+<h2>列表B</h2>
+<ul class="B">
+    <li>列表项目1</li>
+    <li>列表项目2</li>
+    <li>列表项目3</li>
+    <li>列表项目4</li>
+    <li>列表项目5</li>
+</ul>
+<h2>列表C</h2>
+<ul class="C">
+    <li>列表项目1</li>
+    <li>列表项目2</li>
+    <li>列表项目3</li>
+    <li>列表项目4</li>
+    <li>列表项目5</li>
+</ul>
+
+<h2>列表D</h2>
+<div class="D">
+    <h2>文章标题A</h2>
+    <p>文章正文。</p>
+    <h2>文章标题B</h2>
+    <p>文章正文。</p>
+    <h2>文章标题C</h2>
+    <p>文章正文。</p>
+    <h2>文章标题D</h2>
+    <p>文章正文。</p>
+</div>
+
+<h2>列表E</h2>
+<ul class="E">
+    <li>列表项目1</li>
+    <li>列表项目2</li>
+    <li>列表项目3</li>
+    <li>列表项目4</li>
+    <li>列表项目5</li>
+    <li>列表项目6</li>
+    <li>列表项目7</li>
+    <li>列表项目8</li>
+    <li>列表项目9</li>
+    <li>列表项目10</li>
+    <li>列表项目11</li>
+    <li>列表项目12</li>
+</ul>
+
+<h2>列表F</h2>
+<ul class="F">
+    <li>列表项目1</li>
+</ul>
+
+<p class="desc">
+    本节介绍
+    <mark>first-child选择器、last-child选择器、nth-child选择器与nth-last-child选择器</mark>
+    。利用这几个选择器，能够特别针对一个父元素中的第一个子元素、最后一个子元素、指定序号的子元素，甚至第偶数个或第奇数个子元素进行样式的指定。
+</p>
+<p class="desc">
+    对指定序号的子元素使用样式
+    如果使用 <mark>nth-child选择器与nth-last-child选择器</mark>，不仅可以指定某个父元素中第一个子元素以及最后一个子元素的样式，还可以针对父元素中某个指定序号的子元素来指定样式。这两个选择器是first-child及last-child的扩展选择器。
+</p>
+<p class="desc">
+    在CSS 3中，使用 <mark>nth-of-type选择器与nth-last-of-type选择器</mark>来避免这类问题的发生。使用这两个选择器时，CSS 3在计算子元素是第奇数个子元素还是第偶数个子元素时，就只针对同类型的子元素进行计算了。
+</p>
+
+<p class="desc">
+    仍然可以采用nth-child选择器，只需在“nth-child（n）”语句处，把参数n改成可循环的an+b的形式就可以了。a表示每次循环中共包括几种样式，b表示指定的样式在循环中所处位置。如此处是4种背景色作为一组循环，则将代码清单19-16中样式指定的代码修改成如下所示的指定方法。
+</p>
+</body>
+</html>

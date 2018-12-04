@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器 UI元素状态伪类选择器7</title>
+    <style type="text/css">
+        input[type="text"]:required {
+            border-color: red;
+            border-width: 3px;
+        }
+
+        input[type="text"]:optional {
+            border-color: black;
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    姓名：<input type="text" required placeholder="必须输入姓名"/>
+    <br/>
+    住址：<input type="text"/>
+</form>
+<hr>
+<p class="desc">
+    E：required伪类选择器用来指定允许使用required属性，且已经指定了required属性的input元素、select元素以及textarea元素的样式。
+</p>
+<div class="desc">
+    E：optional伪类选择器用来指定允许使用required属性，且未指定required属性的input元素、select元素以及textarea元素的样式。
+</div>
+</body>
+</html>
